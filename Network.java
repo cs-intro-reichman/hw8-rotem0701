@@ -32,8 +32,10 @@ public class Network {
         if (name == null) {
             return null;
         }
+
+        String lowerCaseName = name.toLowerCase();
         for (int i = 0; i < userCount; i++) {
-            if (users[i].getName().equals(name)) {
+            if (users[i].getName().toLowerCase().equals(lowerCaseName)) {
                 return users[i];
             }
         }
