@@ -133,11 +133,12 @@ public class Network {
 
     // Returns a textual description of all the users in this network, and who they follow.
     public String toString() {
-        String output = "Network:\n";
+        String output = "Network:";
 
         if (userCount == 0) {
             return output; 
         }
+        output += "\n";
 
         for (int i = 0; i < userCount; i++) {
             User user = users[i];
@@ -146,16 +147,20 @@ public class Network {
             output += name + " ->";
            
             if (follow == null || follow.length == 0 || follow[0] == null) {
-                output += "\n"; 
             } else {
-
+                output += " ";
                 for (int j = 0; j < follow.length; j++) {
                     if (follow[j] != null) {
-                        output += " " + follow[j];
+                        output += follow[j];
+                        if (j < follow.length - 1) {
+                            output += " "; 
+                        }                  
                     }
                 }
-                output += "\n"; 
             }
+
+            output += "\n"; 
+
         }
         return output;
     }
