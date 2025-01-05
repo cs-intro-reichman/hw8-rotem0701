@@ -144,11 +144,10 @@ public class Network {
             User user = users[i];
             String name = user.getName();
             String[] follow = user.getfFollows();
-            output += name + " ->";
+            output += name + " -> ";
            
             if (follow == null || follow.length == 0 || follow[0] == null) {
             } else {
-                output += " ";
                 for (int j = 0; j < follow.length; j++) {
                     if (follow[j] != null) {
                         output += follow[j] + " ";
