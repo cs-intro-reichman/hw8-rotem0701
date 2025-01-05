@@ -158,9 +158,9 @@ public class Network {
                     }
                 }
             }
-
-            output += "\n"; 
-
+            if (i < userCount - 1) {
+                output += "\n"; 
+            }                  
         }
         return output;
     }
