@@ -64,7 +64,7 @@ public class Network {
         User user1 = getUser(name1);
         User user2 = getUser(name2);
 
-        if (user1 == null || user2 == null) {
+        if (user1 == null || user2 == null || name1.toLowerCase().equals(name2.toLowerCase())) {
             return false;
         }
         
