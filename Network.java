@@ -151,10 +151,12 @@ public class Network {
                 output += " ";
                 for (int j = 0; j < follow.length; j++) {
                     if (follow[j] != null) {
-                        output += follow[j];
+                        output += follow[j] + " ";
+                        /* 
                         if (j < follow.length - 1) {
                             output += " "; 
-                        }                  
+                        }   
+                         */               
                     }
                 }
             }
